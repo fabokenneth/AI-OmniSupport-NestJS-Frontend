@@ -182,9 +182,8 @@ Components are placed in `app/components/ui/` and auto-imported by Nuxt.
 ## Contributing
 
 1. Branch from `main`: `git checkout -b feat/your-feature`
-2. Follow the coding standards in `CLAUDE.md` (not committed — ask the team)
-3. Run `npm run build` before opening a PR — the build must be clean
-4. One PR per feature; keep changes focused
+2. Run `npm run build` before opening a PR — the build must be clean
+3. One PR per feature; keep changes focused
 
 ---
 

@@ -18,15 +18,15 @@ const features = [
     title: 'AI-First Responses',
     description: 'GPT-4 powered suggestions resolve 60% of tickets without human intervention.',
     icon: Bot,
-    iconBg: 'bg-violet-DEFAULT/10',
-    iconColor: 'text-violet-DEFAULT',
+    iconBg: 'bg-violet/10',
+    iconColor: 'text-violet',
   },
   {
     title: 'Lightning Fast',
     description: 'Average first-response time under 30 seconds across all channels.',
     icon: Zap,
     iconBg: 'bg-emerald/10',
-    iconColor: 'text-emerald-DEFAULT',
+    iconColor: 'text-emerald',
   },
   {
     title: 'Enterprise Ready',
@@ -44,22 +44,22 @@ const features = [
     <section class="relative isolate overflow-hidden">
       <!-- Background gradient -->
       <div
-        class="pointer-events-none absolute inset-0 -z-10 bg-gradient-to-br from-slate-50 via-indigo-50/40 to-violet-50/30 dark:from-background-dark dark:via-violet-950/20 dark:to-background-dark"
+        class="pointer-events-none absolute inset-0 -z-10 bg-gradient-to-br from-slate-50 via-indigo-50/40 to-violet-50/30 dark:from-background dark:via-violet/5 dark:to-background"
         aria-hidden="true"
       />
 
       <div class="mx-auto max-w-7xl px-4 py-24 sm:px-6 sm:py-36 lg:px-8">
         <div class="mx-auto max-w-3xl text-center">
           <!-- Badge -->
-          <div class="mb-6 inline-flex items-center gap-2 rounded-full border border-violet-DEFAULT/20 bg-violet-DEFAULT/10 px-4 py-1.5 text-sm font-medium text-violet-DEFAULT dark:border-violet-light/20 dark:bg-violet-DEFAULT/20 dark:text-violet-light">
-            <span class="h-1.5 w-1.5 rounded-full bg-violet-DEFAULT dark:bg-violet-light" />
+          <div class="mb-6 inline-flex items-center gap-2 rounded-full border border-violet/20 bg-violet/10 px-4 py-1.5 text-sm font-medium text-violet dark:border-violet-light/20 dark:bg-violet/20 dark:text-violet-light">
+            <span class="h-1.5 w-1.5 rounded-full bg-violet dark:bg-violet-light" />
             Powered by AI · Built for scale
           </div>
 
           <!-- Headline -->
           <h1 class="text-4xl font-extrabold tracking-tight text-primary dark:text-primary-foreground sm:text-6xl lg:text-7xl">
             Support at
-            <span class="bg-gradient-to-r from-violet-DEFAULT to-emerald-DEFAULT bg-clip-text text-transparent">
+            <span class="bg-gradient-to-r from-violet to-emerald bg-clip-text text-transparent">
               AI speed
             </span>
           </h1>
@@ -72,13 +72,13 @@ const features = [
           <div class="mt-10 flex flex-wrap items-center justify-center gap-4">
             <NuxtLink
               to="/auth/register"
-              class="rounded-lg bg-primary px-6 py-3 text-sm font-semibold text-primary-foreground shadow-md transition-all hover:bg-primary-800 hover:shadow-lg dark:bg-violet-DEFAULT dark:hover:bg-violet-dark"
+              class="rounded-lg bg-primary px-6 py-3 text-sm font-semibold text-primary-foreground shadow-md transition-all hover:bg-primary/90 hover:shadow-lg dark:bg-violet dark:hover:bg-violet-dark"
             >
               Sign up as Company
             </NuxtLink>
             <NuxtLink
               to="/demo"
-              class="rounded-lg border border-border bg-surface px-6 py-3 text-sm font-semibold text-foreground transition-colors hover:bg-muted dark:bg-surface-dark dark:hover:bg-muted"
+              class="rounded-lg border border-border bg-card px-6 py-3 text-sm font-semibold text-foreground transition-colors hover:bg-muted"
             >
               View live demo →
             </NuxtLink>
@@ -90,7 +90,7 @@ const features = [
           <div
             v-for="feature in features"
             :key="feature.title"
-            class="rounded-xl border border-border bg-surface/80 p-6 shadow-sm backdrop-blur-sm transition-shadow hover:shadow-md dark:bg-surface-dark/80"
+            class="rounded-xl border border-border bg-card/80 p-6 shadow-sm backdrop-blur-sm transition-shadow hover:shadow-md"
           >
             <div :class="`mb-4 inline-flex rounded-lg p-2.5 ${feature.iconBg}`">
               <component :is="feature.icon" class="h-5 w-5" :class="feature.iconColor" />

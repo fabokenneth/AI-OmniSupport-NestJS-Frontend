@@ -49,14 +49,14 @@ const isActive = (to: string) => route.path.startsWith(to)
     <!-- Sidebar -->
     <aside
       :class="[
-        'flex flex-col border-r border-border bg-surface dark:bg-surface-dark transition-all duration-300',
+        'flex flex-col border-r border-border bg-sidebar transition-all duration-300',
         collapsed ? 'w-16' : 'w-64',
       ]"
     >
       <!-- Logo -->
       <div class="flex h-16 shrink-0 items-center border-b border-border px-4">
         <NuxtLink to="/dashboard" class="flex min-w-0 items-center gap-2">
-          <Bot class="h-6 w-6 shrink-0 text-violet-DEFAULT" />
+          <Bot class="h-6 w-6 shrink-0 text-violet" />
           <span
             v-if="!collapsed"
             class="truncate text-sm font-bold tracking-tight text-primary dark:text-primary-foreground"
@@ -89,7 +89,7 @@ const isActive = (to: string) => route.path.startsWith(to)
           :class="[
             'group flex items-center gap-3 rounded-md px-2 py-2 text-sm font-medium transition-colors',
             isActive(item.to)
-              ? 'bg-primary text-primary-foreground dark:bg-violet-DEFAULT'
+              ? 'bg-primary text-primary-foreground dark:bg-violet'
               : 'text-muted-foreground hover:bg-muted hover:text-foreground',
           ]"
           :title="collapsed ? item.label : undefined"
@@ -98,7 +98,7 @@ const isActive = (to: string) => route.path.startsWith(to)
           <span v-if="!collapsed" class="flex-1 truncate">{{ item.label }}</span>
           <span
             v-if="!collapsed && item.badge"
-            class="rounded bg-violet-DEFAULT/20 px-1.5 py-0.5 text-xs font-semibold text-violet-DEFAULT dark:text-violet-light"
+            class="rounded bg-violet/20 px-1.5 py-0.5 text-xs font-semibold text-violet dark:text-violet-light"
           >
             {{ item.badge }}
           </span>
@@ -130,13 +130,13 @@ const isActive = (to: string) => route.path.startsWith(to)
 
     <!-- Main content -->
     <div class="flex flex-1 flex-col overflow-hidden">
-      <header class="flex h-16 shrink-0 items-center justify-between border-b border-border bg-surface px-6 dark:bg-surface-dark">
+      <header class="flex h-16 shrink-0 items-center justify-between border-b border-border bg-card px-6">
         <h1 class="text-lg font-semibold capitalize">
           {{ route.meta.title ?? route.path.split('/').at(-1) ?? 'Dashboard' }}
         </h1>
         <div class="flex items-center gap-3">
-          <span class="inline-flex items-center gap-1.5 rounded-full bg-emerald/10 px-2.5 py-1 text-xs font-medium text-emerald-DEFAULT">
-            <span class="h-1.5 w-1.5 rounded-full bg-emerald-DEFAULT" />
+          <span class="inline-flex items-center gap-1.5 rounded-full bg-emerald/10 px-2.5 py-1 text-xs font-medium text-emerald">
+            <span class="h-1.5 w-1.5 rounded-full bg-emerald" />
             AI Online
           </span>
         </div>

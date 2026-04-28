@@ -18,10 +18,10 @@ interface StatCard {
 }
 
 const stats: StatCard[] = [
-  { label: 'Open Tickets',      value: '142',   delta: '+12 today',   positive: false, icon: MessageSquare },
-  { label: 'Resolved Today',    value: '87',    delta: '+23%',        positive: true,  icon: CheckCircle2 },
+  { label: 'Open Tickets',      value: '142',   delta: '+12 today',        positive: false, icon: MessageSquare },
+  { label: 'Resolved Today',    value: '87',    delta: '+23%',             positive: true,  icon: CheckCircle2 },
   { label: 'Avg. Response',     value: '28s',   delta: '−4s vs last week', positive: true,  icon: Clock },
-  { label: 'AI Auto-resolved',  value: '61%',   delta: '+5% this month',  positive: true,  icon: Bot },
+  { label: 'AI Auto-resolved',  value: '61%',   delta: '+5% this month',   positive: true,  icon: Bot },
 ]
 </script>
 
@@ -32,7 +32,7 @@ const stats: StatCard[] = [
       <div
         v-for="stat in stats"
         :key="stat.label"
-        class="rounded-xl border border-border bg-surface p-5 shadow-sm dark:bg-surface-dark"
+        class="rounded-xl border border-border bg-card p-5 shadow-sm"
       >
         <div class="flex items-start justify-between">
           <div>
@@ -46,7 +46,7 @@ const stats: StatCard[] = [
         <p
           :class="[
             'mt-3 text-xs font-medium',
-            stat.positive ? 'text-emerald-DEFAULT' : 'text-destructive',
+            stat.positive ? 'text-emerald' : 'text-destructive',
           ]"
         >
           {{ stat.delta }}
@@ -56,7 +56,7 @@ const stats: StatCard[] = [
 
     <!-- Placeholder sections -->
     <div class="grid grid-cols-1 gap-6 lg:grid-cols-2">
-      <div class="rounded-xl border border-border bg-surface p-6 shadow-sm dark:bg-surface-dark">
+      <div class="rounded-xl border border-border bg-card p-6 shadow-sm">
         <h2 class="mb-4 font-semibold">Recent Conversations</h2>
         <div class="space-y-3">
           <div
@@ -66,7 +66,7 @@ const stats: StatCard[] = [
           />
         </div>
       </div>
-      <div class="rounded-xl border border-border bg-surface p-6 shadow-sm dark:bg-surface-dark">
+      <div class="rounded-xl border border-border bg-card p-6 shadow-sm">
         <h2 class="mb-4 font-semibold">AI Activity</h2>
         <div class="flex h-48 items-center justify-center rounded-md border border-dashed border-border text-sm text-muted-foreground">
           Chart coming soon
